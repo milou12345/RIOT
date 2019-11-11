@@ -1,0 +1,3 @@
+#!/bin/bash
+# My first script
+echo "sudo BUILD_IN_DOCKER=1 make BOARD=esp8266-sparkfun-thing flash ESPTOOL=$(which esptool) FLASHER=$(which esptool) PREFLASHER=$(which esptool) "
