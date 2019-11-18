@@ -58,7 +58,10 @@ USEMODULE += gnrc_icmpv6_echo
 USEMODULE += shell
 USEMODULE += shell_commands
 USEMODULE += ps
+USEMODULE += esp_wifi
+USEMODULE += esp_now
 
+#USEMODULE += gnrc_rpl
 # include UHCP client
 USEMODULE += gnrc_uhcpc
 
@@ -71,6 +74,9 @@ USEMODULE += gnrc_uhcpc
 # development process:
 DEVELHELP ?= 1
 
+CFLAGS+=-DESP_WIFI_SSID=\"RIOTHotspot\" 
+CFLAGS+=-DESP_WIFI_PASS=\"rIoTiSbEsT\"
+CFLAGS+=-DESP_NOW_CHANNEL=7
 # Change this to 0 show compiler invocation lines by default:
 QUIET ?= 1
 TAP ?= tap0
