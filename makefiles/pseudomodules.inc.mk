@@ -40,8 +40,9 @@ PSEUDOMODULES += gnrc_sixlowpan_router
 PSEUDOMODULES += gnrc_sixlowpan_router_default
 PSEUDOMODULES += gnrc_sock_check_reuse
 PSEUDOMODULES += gnrc_txtsnd
-PSEUDOMODULES += i2c_scan
 PSEUDOMODULES += heap_cmd
+PSEUDOMODULES += i2c_scan
+PSEUDOMODULES += ina3221_alerts
 PSEUDOMODULES += l2filter_blacklist
 PSEUDOMODULES += l2filter_whitelist
 PSEUDOMODULES += lis2dh12_i2c
@@ -58,6 +59,7 @@ PSEUDOMODULES += netstats_l2
 PSEUDOMODULES += netstats_ipv6
 PSEUDOMODULES += netstats_rpl
 PSEUDOMODULES += nimble
+PSEUDOMODULES += nimble_autoconn_%
 PSEUDOMODULES += newlib
 PSEUDOMODULES += newlib_gnu_source
 PSEUDOMODULES += newlib_nano
@@ -67,6 +69,7 @@ PSEUDOMODULES += posix_headers
 PSEUDOMODULES += printf_float
 PSEUDOMODULES += prng
 PSEUDOMODULES += prng_%
+PSEUDOMODULES += qmc5883l_int
 PSEUDOMODULES += riotboot_%
 PSEUDOMODULES += saul_adc
 PSEUDOMODULES += saul_default
@@ -99,8 +102,10 @@ PSEUDOMODULES += at86rfa1
 PSEUDOMODULES += at86rfr2
 
 # include variants of the BMX280 drivers as pseudo modules
-PSEUDOMODULES += bmp280
-PSEUDOMODULES += bme280
+PSEUDOMODULES += bmp280_i2c
+PSEUDOMODULES += bmp280_spi
+PSEUDOMODULES += bme280_i2c
+PSEUDOMODULES += bme280_spi
 
 # variants of TI ADCXX1C
 PSEUDOMODULES += adc081c
@@ -118,6 +123,10 @@ PSEUDOMODULES += cc1101
 # include variants of MPU9X50 drivers as pseudo modules
 PSEUDOMODULES += mpu9150
 PSEUDOMODULES += mpu9250
+
+# include variants of INA2xx drivers as pseudo modules
+PSEUDOMODULES += ina219
+PSEUDOMODULES += ina220
 
 # include variants of mrf24j40 drivers as pseudo modules
 PSEUDOMODULES += mrf24j40m%
@@ -154,6 +163,9 @@ PSEUDOMODULES += rn2903
 PSEUDOMODULES += vcnl4010
 PSEUDOMODULES += vcnl4020
 PSEUDOMODULES += vcnl4040
+
+# implementations of ws281x_write as submodules of ws281x:
+PSEUDOMODULES += ws281x_%
 
 # include variants of lpsxxx drivers as pseudo modules
 PSEUDOMODULES += lps331ap

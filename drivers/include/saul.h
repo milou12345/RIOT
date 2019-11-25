@@ -105,6 +105,7 @@ enum {
     SAUL_SENSE_CAPACITANCE = 0x97,     /**< sensor: capacitance */
     SAUL_SENSE_VOLTAGE     = 0x98,     /**< sensor: voltage */
     SAUL_SENSE_PH          = 0x99,     /**< sensor: pH */
+    SAUL_SENSE_POWER       = 0x9a,     /**< sensor: power */
     SAUL_CLASS_ANY         = 0xff      /**< any device - wildcard */
     /* extend this list as needed... */
 };
@@ -113,7 +114,7 @@ enum {
  * @brief   Read a value (a set of values) from a device
  *
  * Simple sensors, as e.g. a temperature sensor, will return exactly one value
- * together with the values scale and unit. Some sensors might return a touple
+ * together with the values scale and unit. Some sensors might return a tuple
  * or triple of data (e.g. a 3-axis accelerometer).
  *
  * Actuators can chose to either just return -ENOTSUP or to return their current
