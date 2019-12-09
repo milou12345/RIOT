@@ -5,7 +5,7 @@ APPLICATION = RIOT_ESP_NOW_WiFi_Border_Router
  BOARD ?= esp32-wrover-kit
 
 # This has to be the absolute path to the RIOT base directory:
-RIOTBASE ?= /home/milan/Dokumente/Uni/Git/RIOT/
+RIOTBASE ?= $(CURDIR)/../..
 # platform specific modules and settings
 GNRC_NETIF_NUMOF := 2
 USEMODULE += esp_wifi
@@ -31,7 +31,7 @@ USEMODULE += shell
 USEMODULE += shell_commands
 USEMODULE += ps
 
-
+CFLAGS+=-DDEBUG_ASSERT_VERBOSE
 CFLAGS+=-DESP_WIFI_SSID=\"hack_n_ack\" 
 CFLAGS+=-DESP_WIFI_PASS=\"ThefriendlyOSfortheIoT\"
 CFLAGS+=-DESP_NOW_CHANNEL=13

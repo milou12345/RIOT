@@ -73,10 +73,10 @@ USEMODULE += gnrc_uhcpc
 # which is not needed in a production environment but helps in the
 # development process:
 DEVELHELP ?= 1
-
-CFLAGS+=-DESP_WIFI_SSID=\"RIOTHotspot\" 
-CFLAGS+=-DESP_WIFI_PASS=\"rIoTiSbEsT\"
-CFLAGS+=-DESP_NOW_CHANNEL=7
+CFLAGS+=-DDEBUG_ASSERT_VERBOSE
+CFLAGS+=-DESP_WIFI_SSID=\"hack_n_ack\" 
+CFLAGS+=-DESP_WIFI_PASS=\"ThefriendlyOSfortheIoT\"
+#CFLAGS+=-DESP_NOW_CHANNEL=1
 # Change this to 0 show compiler invocation lines by default:
 QUIET ?= 1
 TAP ?= tap0
