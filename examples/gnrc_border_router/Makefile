@@ -54,7 +54,10 @@ USEMODULE += gnrc_icmpv6_echo
 USEMODULE += shell
 USEMODULE += shell_commands
 USEMODULE += ps
+USEMODULE += esp_wifi
+USEMODULE += esp_now
 
+#USEMODULE += gnrc_rpl
 # include UHCP client
 USEMODULE += gnrc_uhcpc
 
